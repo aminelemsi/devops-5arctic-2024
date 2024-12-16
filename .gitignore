@@ -1,0 +1,2 @@
+deployment/prod/secret-mysql.yml
+deployment/prod/secret-spring.yml

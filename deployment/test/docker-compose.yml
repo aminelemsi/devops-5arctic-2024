@@ -1,0 +1,17 @@
+services:
+  mysql-test:
+    image: mysql:latest
+    container_name: mysql-test
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_USER: amine-test
+      MYSQL_PASSWORD: 123
+      MYSQL_DATABASE: devops-test
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data-test:/data/mysql
+
+volumes:
+  mysql_data-test:
